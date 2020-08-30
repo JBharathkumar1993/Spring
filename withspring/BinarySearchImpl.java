@@ -1,7 +1,12 @@
 package com.java.spring.withspring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 
+    @Autowired
     private SortAlgorithm mySorting;
 
     public BinarySearchImpl(SortAlgorithm mySorting) {
@@ -13,6 +18,7 @@ public class BinarySearchImpl {
         int[] sorted = mySorting.sort(inputArray);
         // Search Element
         // Return Element
+        System.out.println(mySorting);
         return 3;
     }
 }
