@@ -1,7 +1,5 @@
-package com.java.spring;
+package com.java.spring.withoutspring;
 
-import com.java.spring.withoutspring.BinarySearchImpl;
-import com.java.spring.withoutspring.BubbleSortAlgorithm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
