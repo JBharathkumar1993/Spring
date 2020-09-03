@@ -1,13 +1,12 @@
-package com.java.spring.withspring;
+package com.java.spring.componentscan;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
 @Qualifier("quicksort")
 //@Primary
-public class QuickSortAlgorithm implements SortAlgorithm {
+public class QuickSortComponentScanAlgorithm implements SortAlgorithmComponentScan {
 
     @Override
     public int[] sort(int[] inputArray) {

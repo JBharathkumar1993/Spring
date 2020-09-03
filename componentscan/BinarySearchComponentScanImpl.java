@@ -1,4 +1,4 @@
-package com.java.spring.withspring;
+package com.java.spring.componentscan;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,14 +6,16 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+
+
 @Component
 //@Scope("prototype")
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class BinarySearchImpl {
+public class BinarySearchComponentScanImpl {
 
     @Autowired
     @Qualifier("bubblesort")
-    private SortAlgorithm mySorting;
+    private SortAlgorithmComponentScan mySorting;
 
     public int binarySearch(int[] inputArray, int elementToSearch){
 
