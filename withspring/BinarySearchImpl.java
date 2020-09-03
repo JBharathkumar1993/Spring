@@ -7,11 +7,12 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 
 @Component
 //@Scope("prototype")
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
 
     @Autowired
@@ -30,5 +31,10 @@ public class BinarySearchImpl {
     @PostConstruct
     public void postConstructCalling(){
         System.out.println("Post Construct Called");
+    }
+
+    @PreDestroy
+    public void preDestroyCalling(){
+        System.out.println("Pre Destroy method called");
     }
 }
