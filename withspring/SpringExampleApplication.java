@@ -13,12 +13,12 @@ public class SpringExampleApplication {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringExampleApplication.class, args);
 
 		BinarySearchImpl myBinarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
-		BinarySearchImpl myBinarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
-		BinarySearchImpl myBinarySearch3 = applicationContext.getBean(BinarySearchImpl.class);
+		//BinarySearchImpl myBinarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
+		//BinarySearchImpl myBinarySearch3 = applicationContext.getBean(BinarySearchImpl.class);
 
 		System.out.println(myBinarySearch1);
-		System.out.println(myBinarySearch2);
-		System.out.println(myBinarySearch3);
+		//System.out.println(myBinarySearch2);
+		//System.out.println(myBinarySearch3);
 
 		
 

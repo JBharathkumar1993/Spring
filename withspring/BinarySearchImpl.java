@@ -6,6 +6,9 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
+
 @Component
 //@Scope("prototype")
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -22,5 +25,10 @@ public class BinarySearchImpl {
         // Return Element
         System.out.println(mySorting);
         return 3;
+    }
+
+    @PostConstruct
+    public void postConstructCalling(){
+        System.out.println("Post Construct Called");
     }
 }
