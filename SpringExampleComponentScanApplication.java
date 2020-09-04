@@ -1,4 +1,4 @@
-package com.java.spring.withspring;
+package com.java.spring;
 
 import com.java.spring.componentscan.BinarySearchComponentScanImpl;
 import org.springframework.boot.SpringApplication;

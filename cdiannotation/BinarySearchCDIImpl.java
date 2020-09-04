@@ -1,4 +1,4 @@
-package com.java.spring.componentscan;
+package com.java.spring.cdiannotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,18 +6,15 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.inject.Singleton;
 
+@Component
+//@Scope("prototype")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class BinarySearchCDIImpl {
 
-@Named
-@Singleton
-public class BinarySearchComponentScanImpl {
-
-    @Inject
+    @Autowired
     @Qualifier("bubblesort")
-    private SortAlgorithmComponentScan mySorting;
+    private SortAlgorithmCDI mySorting;
 
     public int binarySearch(int[] inputArray, int elementToSearch){
 

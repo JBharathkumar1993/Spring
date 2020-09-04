@@ -1,6 +1,6 @@
-package com.java.spring.withspring;
+package com.java.spring;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
+import com.java.spring.withspring.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

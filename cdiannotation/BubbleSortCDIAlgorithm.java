@@ -1,4 +1,4 @@
-package com.java.spring.componentscan;
+package com.java.spring.cdiannotation;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -6,12 +6,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Named;
-
-@Named
+@Component
 @Qualifier("bubblesort")
 @Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class BubbleSortComponentScanAlgorithm implements SortAlgorithmComponentScan {
+public class BubbleSortCDIAlgorithm implements SortAlgorithmCDI {
 
     @Override
     public int[] sort(int[] inputArray) {

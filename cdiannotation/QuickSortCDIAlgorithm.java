@@ -1,14 +1,12 @@
-package com.java.spring.componentscan;
+package com.java.spring.cdiannotation;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Named;
-
-@Named
+@Component
 @Qualifier("quicksort")
 //@Primary
-public class QuickSortComponentScanAlgorithm implements SortAlgorithmComponentScan {
+public class QuickSortCDIAlgorithm implements SortAlgorithmCDI {
 
     @Override
     public int[] sort(int[] inputArray) {
